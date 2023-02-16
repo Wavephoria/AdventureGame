@@ -22,10 +22,14 @@ class Hero : BaseAttributesForAll
     }
     internal override string GetName()
     {
-        string listOfName = File.ReadAllText("Heroes/HeroNamesMale.txt");
-        string[] names = listOfName.Split(';');
-        int number = randomNumber.Next(1, names.Length);
-        return names[number];
+        string listOfMale = File.ReadAllText("Heroes/HeroNamesMale.txt");
+        string listOfFemale = File.ReadAllText("Heroes/HeroNamesFemale.txt");
+        string[] names;
+        if (randomNumber.Next(1, 3) == 1)
+            names = listOfMale.Split(';');
+        else
+            names = listOfFemale.Split(';');
+        return names[randomNumber.Next(1, names.Length)];
     }
     internal void ItemToBackpack(IBag item)
     {
