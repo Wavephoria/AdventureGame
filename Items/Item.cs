@@ -1,4 +1,7 @@
-class Item : IBag
+namespace AdventureGame
 {
-    public string Name { get; set; }
+    class Item : IBag
+    {
+        public string Name { get; set; }
+    }
 }

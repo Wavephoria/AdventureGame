@@ -1,4 +1,7 @@
-class WitchDoctor
+namespace AdventureGame
 {
+    class WitchDoctor
+    {
 
+    }
 }

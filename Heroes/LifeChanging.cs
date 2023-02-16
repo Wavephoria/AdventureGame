@@ -1,20 +1,23 @@
-class LifeChanging
+namespace AdventureGame
 {
-    public static int LosingLife(int life)
+    class LifeChanging
     {
-        return life--;
+        public static int LosingLife(int life)
+        {
+            return life--;
+        }
+
+        public static int GainingLife(int life)
+        {
+            return life++;
+        }
+
+        public static int EatingMushroom(int life)
+        {
+            return life + 5;
+        }
+
+
+
     }
-
-    public static int GainingLife(int life)
-    {
-        return life++;
-    }
-
-    public static int EatingMushroom(int life)
-    {
-        return life + 5;
-    }
-
-
-    
 }
