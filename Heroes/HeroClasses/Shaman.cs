@@ -1,4 +1,7 @@
-class Shaman
+namespace AdventureGame
 {
+    class Shaman
+    {
 
+    }
 }

@@ -1,4 +1,7 @@
-class Wizard
+namespace AdventureGame
 {
+    class Wizard
+    {
 
+    }
 }

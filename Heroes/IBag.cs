@@ -1,4 +1,7 @@
-interface IBag
+namespace AdventureGame
 {
-    public string Name { get; set; }
+    interface IBag
+    {
+        public string Name { get; set; }
+    }
 }

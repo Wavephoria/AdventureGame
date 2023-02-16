@@ -1,8 +1,11 @@
-enum Elements
+namespace AdventureGame
 {
-    fire, ice, thunder, water, wind, dark, light
-}
-enum HeroClasses
-{
-    Wizard, Berserker, Shaman, WitchDoctor, Holy, Dark
+    enum Elements
+    {
+        fire, ice, thunder, water, wind, dark, light
+    }
+    enum HeroClasses
+    {
+        Wizard, Berserker, Shaman, WitchDoctor, Holy, Dark
+    }
 }

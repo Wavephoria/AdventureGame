@@ -1,4 +1,7 @@
-class Dark
+namespace AdventureGame
 {
+    class Dark
+    {
 
+    }
 }

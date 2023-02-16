@@ -1,4 +1,7 @@
-class Fire
+namespace AdventureGame
 {
+    class Fire
+    {
 
+    }
 }
