@@ -6,21 +6,19 @@ namespace AdventureGame
         public Elements Element { get; set; }
         public int ExperiencePoints { get; set; }
         public Backpack backpack;
+        public Pouch pouch;
+        public int FocusPercentage { get; set; }
 
-        public Hero(HeroClasses heroClass, Elements element)
+        public Hero()
         {
             Name = GetName();
-            HeroClass = heroClass;
-            Life = RandomHeroLife(heroClass);
-            Element = element;
+            Level = 10;
+            HeroClass = HeroClasses.Adventurer;
+            Life = randomNumber.Next(100, 151);
             backpack = new Backpack($"{Name}s backpack");
+            pouch = new Pouch();
             Initiative = randomNumber.Next(50, 101);
-        }
-        private int RandomHeroLife(HeroClasses heroClass)
-        {
-            // int life = 100;
-            // Random randomNumber = new Random();
-            return 100;
+            FocusPercentage = 100;
         }
         internal override string GetName()
         {
@@ -39,5 +37,11 @@ namespace AdventureGame
                 System.Console.WriteLine("Cant add more items!");
             backpack.open.Add(item);
         }
+
+        public override string ToString()
+        {
+            return $"{Name}";
+        }
+
     }
 }

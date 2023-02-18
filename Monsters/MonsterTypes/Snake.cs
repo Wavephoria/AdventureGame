@@ -7,9 +7,10 @@ namespace AdventureGame
         public override MonsterTypes MonsterType { get; init; } = MonsterTypes.Snake;
         public override int LifeLower { get; set; } = 21;
         public override int LifeHigher { get; set; } = 34;
-        public Snake()
+        public Snake(int level) : base(level)
         {
-            Life = RandomHP();
+            Strength *= Modifier;
+            Life = RandomHP() * Modifier;
             MonsterAttribute = RandomAttribute();
             Name = GetName();
         }

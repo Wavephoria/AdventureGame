@@ -11,7 +11,25 @@ namespace AdventureGame
         public virtual MonsterTypes MonsterType { get; init; }
         public virtual int LifeLower { get; set; } = 0;
         public virtual int LifeHigher { get; set; } = 100;
+        public int Modifier { get; set; }
 
+        public Monster(int level)
+        {
+            int modifier = CheckHeroLevel(level);
+            Modifier = modifier;
+        }
+        internal int CheckHeroLevel(int level)
+        {
+            double modifier;
+            if (level > 1)
+            {
+                modifier = level * 0.75;
+            }
+            else
+                modifier = 1.0;
+
+            return (int)Math.Round(modifier);
+        }
         internal int RandomHP()
         {
             int life = randomNumber.Next(LifeLower, LifeHigher);

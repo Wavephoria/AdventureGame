@@ -8,7 +8,7 @@ namespace AdventureGame
         public override MonsterTypes MonsterType { get; init; } = MonsterTypes.Ogre;
         public override int LifeLower { get; set; } = 55;
         public override int LifeHigher { get; set; } = 110;
-        public Ogre()
+        public Ogre(int level) : base(level)
         {
             Life = RandomHP();
             MonsterAttribute = RandomAttribute();

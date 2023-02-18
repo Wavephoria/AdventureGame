@@ -17,14 +17,14 @@ World functions
 
 Hero functions
 
-- Base class implementation
+- Base class implementation ---- Adventurer implemented
   Everyone will at the start be in some kind of base class, but should soon be able to choose which class to join
 - Level up system
   Will make enemies harder, and drops better
   Will be able to level up within each class at set milestones (Learn new spells or abilities)
-- Gold/Silver
+- Gold/Silver ---- Each Hero will have a pouch with some start gold and silver
   Will be used in town to buy better gear, potions or drink alcohol
-- Focus system
+- Focus system ---- Will be used as a percentage, starting with 100%
   Focus system will be a set level at how good hero will be fighting
   Alcohol will lower it
   Being out on long adventures will also lower it

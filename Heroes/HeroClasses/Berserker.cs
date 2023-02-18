@@ -1,6 +1,6 @@
 namespace AdventureGame
 {
-    class Berserker
+    class Berserker : Adventurer
     {
         // Will only be able to be on range 1
         // Stronger but less hp

@@ -1,6 +1,6 @@
 namespace AdventureGame
 {
-    class Dark
+    class Undertaker : Adventurer
     {
 
     }

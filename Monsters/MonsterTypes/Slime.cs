@@ -8,9 +8,10 @@ namespace AdventureGame
         public override MonsterTypes MonsterType { get; init; }
         public override int LifeLower { get; set; } = 10;
         public override int LifeHigher { get; set; } = 19;
-        public Slime()
+        public Slime(int level) : base(level)
         {
-            Life = RandomHP();
+            Strength *= Modifier / 2;
+            Life = RandomHP() * Modifier;
             Color = RandomColor();
             Name = GetName();
             MonsterType = MonsterTypes.Slime;

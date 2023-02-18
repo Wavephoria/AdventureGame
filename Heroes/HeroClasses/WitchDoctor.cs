@@ -1,6 +1,6 @@
 namespace AdventureGame
 {
-    class WitchDoctor
+    class WitchDoctor : Adventurer
     {
 
     }
