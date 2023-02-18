@@ -1,6 +1,6 @@
 namespace AdventureGame
 {
-    class Shaman
+    class Shaman : Adventurer
     {
 
     }

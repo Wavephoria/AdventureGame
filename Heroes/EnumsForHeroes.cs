@@ -2,10 +2,10 @@ namespace AdventureGame
 {
     enum Elements
     {
-        fire, ice, thunder, water, wind, dark, light
+        none, fire, ice, thunder, water, wind, dark, light
     }
     enum HeroClasses
     {
-        Wizard, Berserker, Shaman, WitchDoctor, Holy, Dark
+        Wizard, Berserker, Shaman, WitchDoctor, Holy, Undertaker, Adventurer
     }
 }

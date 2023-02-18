@@ -2,8 +2,8 @@
 {
     internal class Program
     {
-        public List<Monster> monsters = new List<Monster>();
-        public List<Hero> heroes = new List<Hero>();
+        // public List<Monster> monsters = new List<Monster>();
+        // public List<Hero> heroes = new List<Hero>();
         Battle battle = new Battle();
 
         private static void Main(string[] args)
@@ -15,13 +15,15 @@
         private void GameLogic()
         {
             WorldMap worldMap = new WorldMap();
-            AddHero();
+            // heroes.Add(new Hero());
             // program.AddMonsters();
 
-            Hero jeremiah = heroes[0];
-            Monster blueSlime = new Slime();
-            Monster redSlime = new Slime();
-            Monster snake = new Snake();
+            Hero player = new Hero();
+            System.Console.WriteLine(StoryTelling.BeginningAdventure(player));
+            System.Console.WriteLine(player.pouch);
+
+            Monster redSlime = new Slime(player.Level);
+            Monster snake = new Snake(player.Level);
 
             // System.Console.WriteLine(blueSlime.Name);
             // System.Console.WriteLine(blueSlime.Life + " hp");
@@ -32,22 +34,22 @@
             // System.Console.WriteLine(snake.Name);
             // System.Console.WriteLine(snake.Life + " hp");
 
-            System.Console.WriteLine($"{jeremiah.Life} life left");
-            battle.BattlingEnemy(jeremiah, snake, true);
+            System.Console.WriteLine($"{player.Life} life left");
+            battle.BattlingEnemy(player, snake, true);
             Console.WriteLine(redSlime.Life);
-            battle.BattlingEnemy(jeremiah, redSlime, true);
-            battle.BattlingEnemy(jeremiah, redSlime, true);
+            battle.BattlingEnemy(player, redSlime, true);
+            battle.BattlingEnemy(player, redSlime, true);
             System.Console.WriteLine(redSlime.Life);
-            battle.BattlingEnemy(jeremiah, redSlime, true);
-            battle.BattlingEnemy(jeremiah, redSlime, true);
-            battle.BattlingEnemy(jeremiah, redSlime, true);
-            battle.BattlingEnemy(jeremiah, redSlime, true);
+            battle.BattlingEnemy(player, redSlime, true);
+            battle.BattlingEnemy(player, redSlime, true);
+            battle.BattlingEnemy(player, redSlime, true);
+            battle.BattlingEnemy(player, redSlime, true);
 
 
 
-            System.Console.WriteLine($"{jeremiah.Life} life left");
-            System.Console.WriteLine(jeremiah.Level);
-            System.Console.WriteLine(jeremiah.ExperiencePoints);
+            System.Console.WriteLine($"{player.Life} life left");
+            System.Console.WriteLine(player.Level);
+            System.Console.WriteLine(player.ExperiencePoints);
 
         }
 
@@ -70,11 +72,9 @@
 
         }
 
-        private void AddHero()
-        {
-            heroes.Add(new Hero(HeroClasses.Wizard, Elements.fire));
-            heroes[0].Life = 120;
-            heroes[0].Strength = 7;
-        }
+        // private void AddHero()
+        // {
+        //     heroes.Add(new Hero());
+        // }
     }
 }
