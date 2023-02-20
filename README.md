@@ -5,6 +5,8 @@
 # PrioList
 - Make a movement system
 - Make the generation of preplanned map
+    Need to see how to fix bugs when getting to the end of line, is printing \nQ instead of Q
+    Bottom end of map is also showing wrong values
 
 # Wishlist
 
