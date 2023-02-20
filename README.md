@@ -4,6 +4,7 @@
 
 
 # Update 20/2-23
+- Game is playable but lack stuff to do except just fighting!
 - Map generated from a premade map in Excel
 - Movement implemented
 - Player can now check stats and decide movement each turn
