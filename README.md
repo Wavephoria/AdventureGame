@@ -3,10 +3,8 @@
 - This will be a text-based adventure game
 
 # PrioList
-- Make a movement system
-- Make the generation of preplanned map
-    Need to see how to fix bugs when getting to the end of line, is printing \nQ instead of Q
-    Bottom end of map is also showing wrong values
+- Make a movement system  --- Movement system is implemented, readkeys for WASD buttons
+- Make the generation of preplanned map  --- Map is generated from a made map that can be found in excel file
 
 # Wishlist
 
