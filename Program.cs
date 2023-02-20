@@ -5,6 +5,7 @@
         // public List<Monster> monsters = new List<Monster>();
         // public List<Hero> heroes = new List<Hero>();
         Battle battle = new Battle();
+        Interaction input = new Interaction();
 
         private static void Main(string[] args)
         {
@@ -15,12 +16,24 @@
         private void GameLogic()
         {
             WorldMap worldMap = new WorldMap();
+
+            System.Console.WriteLine(worldMap.MapGrid[60, 0]);
+            System.Console.WriteLine(worldMap.MapGrid[34, 45]);
+            System.Console.WriteLine(worldMap.MapGrid[63, 62]);
+            System.Console.WriteLine(worldMap.MapGrid[62, 63]);
+            System.Console.WriteLine(worldMap.MapGrid[63, 63]);
             // heroes.Add(new Hero());
             // program.AddMonsters();
 
             Hero player = new Hero();
             System.Console.WriteLine(StoryTelling.BeginningAdventure(player));
             System.Console.WriteLine(player.pouch);
+            bool isNotDone = true;
+            do
+            {
+                input.UserInput(worldMap, player);
+
+            } while (isNotDone);
 
             Monster redSlime = new Slime(player.Level);
             Monster snake = new Snake(player.Level);
@@ -34,16 +47,16 @@
             // System.Console.WriteLine(snake.Name);
             // System.Console.WriteLine(snake.Life + " hp");
 
-            System.Console.WriteLine($"{player.Life} life left");
-            battle.BattlingEnemy(player, snake, true);
-            Console.WriteLine(redSlime.Life);
-            battle.BattlingEnemy(player, redSlime, true);
-            battle.BattlingEnemy(player, redSlime, true);
-            System.Console.WriteLine(redSlime.Life);
-            battle.BattlingEnemy(player, redSlime, true);
-            battle.BattlingEnemy(player, redSlime, true);
-            battle.BattlingEnemy(player, redSlime, true);
-            battle.BattlingEnemy(player, redSlime, true);
+            // System.Console.WriteLine($"{player.Life} life left");
+            // battle.BattlingEnemy(player, snake, true);
+            // Console.WriteLine(redSlime.Life);
+            // battle.BattlingEnemy(player, redSlime, true);
+            // battle.BattlingEnemy(player, redSlime, true);
+            // System.Console.WriteLine(redSlime.Life);
+            // battle.BattlingEnemy(player, redSlime, true);
+            // battle.BattlingEnemy(player, redSlime, true);
+            // battle.BattlingEnemy(player, redSlime, true);
+            // battle.BattlingEnemy(player, redSlime, true);
 
 
 

@@ -8,9 +8,14 @@ namespace AdventureGame
         public Backpack backpack;
         public Pouch pouch;
         public int FocusPercentage { get; set; }
+        public int[,] Position = new int[64, 64];
+        public int X { get; set; } = 15;
+        public int Y { get; set; } = 45;
+        public int StartPosition { get; private set; }
 
         public Hero()
         {
+            StartPosition = Position[X, Y];
             Name = GetName();
             Level = 10;
             HeroClass = HeroClasses.Adventurer;
