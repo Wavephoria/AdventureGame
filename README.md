@@ -2,6 +2,10 @@
 
 - This will be a text-based adventure game
 
+# PrioList
+- Make a movement system
+- Make the generation of preplanned map
+
 # Wishlist
 
 Main functions
