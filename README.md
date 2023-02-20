@@ -14,17 +14,6 @@
 # Priorities
 - Encounters in the world
 - Monsters
-  Slime - Grassland, Road, Forest, Hill
-  Snake - Grassland, Forest, Deep Forest
-  Dingo - Sandland
-  Ogre - Mountain, Deep Forest
-  Skeleton - Grassland, Sandland
-  Troll - Grassland, Forest, Deep Forest
-  Dragon - Mountain
-  Spider - Sandland, Grassland, Forest
-  Goblins - Hill, Forest, Deep Forest
-  Gorilla - Hill, Mountain
-  Wolf - Hill, Forest
 - Battlesystem
   Flee from battle
 
