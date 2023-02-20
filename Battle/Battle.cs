@@ -6,7 +6,7 @@ namespace AdventureGame
         // Need to check for who has initiative and what distance between hero and monster
         // and if anyone attack from distance, there will be no attack back unless the other also
         // has enough range
-        public void BattlingEnemy(Hero hero, Monster monster, bool isHeroInitiative)
+        public void BattlingEnemy(Hero hero, Monster monster)
         {
 
             if (monster.Life == 0)
@@ -21,16 +21,22 @@ namespace AdventureGame
             // Should give hero a choice of what to do before fighting
             // Fight, Run, Look in backpack
 
-            if (isHeroInitiative)
+            bool isHeroInitiative = true;
+            do
             {
-                HitByHero(hero, monster);
-                HitByMonster(hero, monster);
-            }
-            else
-            {
-                HitByMonster(hero, monster);
-                HitByHero(hero, monster);
-            }
+                if (isHeroInitiative)
+                {
+                    HitByHero(hero, monster);
+                    HitByMonster(hero, monster);
+                }
+                else
+                {
+                    HitByMonster(hero, monster);
+                    HitByHero(hero, monster);
+                }
+                System.Console.WriteLine($"Hero HP: {hero.Life}");
+                System.Console.WriteLine($"Monster HP: {monster.Life}");
+            } while (hero.Life > 0 && monster.Life > 0);
 
         }
         private void HitByMonster(Hero hero, Monster monster)

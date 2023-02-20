@@ -13,7 +13,14 @@ namespace AdventureGame
 
         public override string ToString()
         {
-            return $"You have {Gold} gold and {Silver} silver";
+            if (Gold == 0 && Silver == 0)
+                return $"You have no gold or silver left!";
+            else if (Gold == 0)
+                return $"You have {Silver} left!";
+            else if (Silver == 0)
+                return $"You have {Gold} left!";
+            else
+                return $"You have {Gold} gold and {Silver} silver";
         }
     }
 }
