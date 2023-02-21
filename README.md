@@ -31,6 +31,9 @@ Main functions
 
 - Save/Load feature
   At first this will most likely be some kind of text-based saving function, maybe later a small database
+- Implement playing in browser
+- Running two threads
+  Main game in middle, stats menu on left side
 
 
 World functions
