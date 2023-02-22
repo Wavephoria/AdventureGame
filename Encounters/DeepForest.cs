@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class DeepForest : Encounter
     {
+        // Snake, Ogre, Troll
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);

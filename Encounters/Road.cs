@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class Road : Encounter
     {
+        // Slime
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);

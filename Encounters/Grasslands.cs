@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class Grasslands : Encounter
     {
+        // Slime, Snake, Skeleton, Troll, Spider
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);
