@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class Forest : Encounter
     {
+        // Slime, Snake, Spider, Goblin, Wolf, Troll
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);

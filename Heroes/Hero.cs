@@ -17,7 +17,7 @@ namespace AdventureGame
         {
             StartPosition = Position[X, Y];
             Name = GetName();
-            Level = 10;
+            Level = 1;
             HeroClass = HeroClasses.Adventurer;
             Life = randomNumber.Next(100, 151);
             backpack = new Backpack($"{Name}s backpack");

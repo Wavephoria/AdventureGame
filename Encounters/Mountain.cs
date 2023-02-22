@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class Mountain : Encounter
     {
+        // Ogre, Dragon, Gorilla
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);

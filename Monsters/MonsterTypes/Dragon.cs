@@ -1,0 +1,7 @@
+namespace AdventureGame
+{
+    class Dragon
+    {
+
+    }
+}

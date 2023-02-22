@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class Hill : Encounter
     {
+        // Slime, Goblin, Gorilla, Wolf
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);

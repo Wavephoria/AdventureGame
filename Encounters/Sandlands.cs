@@ -2,6 +2,7 @@ namespace AdventureGame
 {
     class Sandlands : Encounter
     {
+        // Dingo, Skeleton, Wolf, Spider
         public override void CheckEncounter(Hero player)
         {
             int number = RandomNumber(1, 101);
