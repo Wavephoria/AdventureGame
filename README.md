@@ -14,9 +14,13 @@
 
 # Priorities
 - Encounters in the world
+- Items
+- Focus
 - Monsters
 - Battlesystem
   Flee from battle
+  Use items
+  Basic enemy knowledge
 
 # Priorites 2
 - Towns
