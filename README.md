@@ -2,6 +2,14 @@
 
 - This will be a text-based adventure game
 
+# Update 7/3-23
+- Changing IDE to Rider from VScode and made some small changes to make it work
+- Changed alot of smaller things in code to make it look better and less code in some parts
+- Working on battle with some tweaks for how fights are going and now being able to run away from a fight
+- Working on monsters to give them different styles and feelings, added flavour text for each different monster type
+  and also changed alot around monster logic with stats
+- Working on encounters out in the world with changed how to structure the checks and some tweaking for how to use random
+- Started working on items for heroes
 
 # Update 20/2-23
 - Game is playable but lack stuff to do except just fighting!
@@ -18,7 +26,6 @@
 - Focus
 - Monsters
 - Battlesystem
-  Flee from battle
   Use items
   Basic enemy knowledge
 
