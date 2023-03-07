@@ -24,10 +24,8 @@
 - Encounters in the world
 - Items
 - Focus
-- Monsters
-- Battlesystem
-  Use items
-  Basic enemy knowledge
+- Monsters, change those made already before making new ones
+- Battlesystem, use items
 
 # Priorites 2
 - Towns
@@ -58,6 +56,7 @@ World functions
 
 Hero functions
 
+- Hero armor and hero weapons
 - Hero classes needs to be built up to offer some different mechanics and playstyle
 - Will change the level up system in game, will have to look at balancing
 - Gold/Silver can be found in chest in the wild and be used in town to buy stuff
@@ -70,8 +69,7 @@ Hero functions
 
 Monster functions
 
-- In each of the different environments in the world, each one will have a different sets of monster list that can spawn and have a different
-  chance or being a monster or something much nicer
+- Each enviroments have a set amount of which types of monsters that can spawn in it
 - Random drops from enemies
   Each enemy type will have a different set of items they can carry
   Will be randomized what they carry
@@ -81,7 +79,6 @@ Monster functions
 Battle system
 
 - Will be balanced and changed later
-- Should be able to run from fights if they are looking to be too dangerous
 
 
 NPC
@@ -92,6 +89,7 @@ NPC
 Items 
 
 - Should have Potions, Valuables, MonsterDrops, Weapons and Armor
+- Set weapons and armor to be equipped to hero and can only have a set amount of each type
 - Can be bought or sold in towns or merchant
 - Backpack will have a set amount of space for items, items worn on you will not be acounted for
 
