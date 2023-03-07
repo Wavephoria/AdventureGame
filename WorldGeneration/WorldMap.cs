@@ -1,4 +1,4 @@
-namespace AdventureGame
+namespace AdventureGame.WorldGeneration
 {
     class WorldMap
     {
@@ -16,7 +16,8 @@ namespace AdventureGame
         private string[,] GeneratingTheMap()
         {
             string[,] grid = new string[64, 64];
-            string filepath = @"WorldGeneration/WorldMapExcelCSV.csv";
+            // Absolute path, should be relative path but can't get it to work
+            string filepath = @"/Users/wavephoria/Library/CloudStorage/OneDrive-Personal/RiderProjects/AdventureGame/WorldGeneration/WorldMapExcelCSV.csv";
             string mapString = File.ReadAllText(filepath);
             string[] mapArray = mapString.Split(';', '\n');
             int x = 0;

@@ -19,5 +19,13 @@ namespace AdventureGame
         {
             return $"{MonsterAttribute} {MonsterType}";
         }
+        
+        public override int ExperiencePoints(Hero hero)
+        {
+            int exp = 140 - (hero.Level * 10);
+            if (exp < 15)
+                return 15;
+            return exp;
+        }
     }
 }

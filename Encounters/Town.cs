@@ -1,3 +1,5 @@
+using AdventureGame.WorldGeneration;
+
 namespace AdventureGame
 {
     class Town : Encounter

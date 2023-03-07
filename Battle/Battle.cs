@@ -2,13 +2,11 @@ namespace AdventureGame
 {
     class Battle
     {
-
         // Need to check for who has initiative and what distance between hero and monster
         // and if anyone attack from distance, there will be no attack back unless the other also
         // has enough range
         public void BattlingEnemy(Hero hero, Monster monster)
         {
-
             if (monster.Life == 0)
             {
                 return;
@@ -20,31 +18,52 @@ namespace AdventureGame
             // but never slimes or snakes
             // Should give hero a choice of what to do before fighting
             // Fight, Run, Look in backpack
-
+            bool HeroNotRunning = true;
             bool isHeroInitiative = true;
             do
             {
-                if (isHeroInitiative)
+                Console.WriteLine($"{hero.Name} has {hero.Life} left \n" +
+                                  $"Hero has {hero.Strength} strength and {hero.Protection} protection");
+                Console.WriteLine($"{monster.Name} has {monster.Life} left \n" +
+                                  $"Monster has {monster.Strength} strength and {monster.Protection} protection");
+                Console.WriteLine("What do you want to do? [F]ight, [R]un or look at [I]tems");
+                ConsoleKeyInfo input = Console.ReadKey();
+                switch (input.Key)
                 {
-                    HitByHero(hero, monster);
-                    HitByMonster(hero, monster);
+                    case ConsoleKey.F:
+                        break;
+                    case ConsoleKey.R:
+                        HeroNotRunning = false;
+                        break;
                 }
-                else
+                
+                if (HeroNotRunning)
                 {
-                    HitByMonster(hero, monster);
-                    HitByHero(hero, monster);
-                }
-                System.Console.WriteLine($"Hero HP: {hero.Life}");
-                System.Console.WriteLine($"Monster HP: {monster.Life}");
-            } while (hero.Life > 0 && monster.Life > 0);
+                    if (isHeroInitiative)
+                    {
+                        HitByHero(hero, monster);
+                        if (monster.Life != 0)
+                            HitByMonster(hero, monster);
+                    }
+                    else
+                    {
+                        HitByMonster(hero, monster);
+                        HitByHero(hero, monster);
+                    }
 
+                    Console.WriteLine($"Hero HP: {hero.Life}");
+                    Console.WriteLine($"Monster HP: {monster.Life}");
+                }
+            } while (hero.Life > 0 && monster.Life > 0 && HeroNotRunning);
         }
+
         private void HitByMonster(Hero hero, Monster monster)
         {
             int hitPower = monster.Strength - hero.Protection;
             int lifeLeft = hero.Life - hitPower;
             hero.Life = lifeLeft;
         }
+
         private void HitByHero(Hero hero, Monster monster)
         {
             int hitPower = hero.Strength - monster.Protection;
@@ -52,45 +71,23 @@ namespace AdventureGame
             if (lifeLeft <= 0)
             {
                 monster.Life = 0;
-                int exp = EnemyKilled(monster);
-                ExperienceGained(hero, exp);
+                EnemyKilled(monster, hero);
             }
             else
                 monster.Life = lifeLeft;
         }
-        private int EnemyKilled(Monster monster)
+
+        private void EnemyKilled(Monster monster, Hero hero)
         {
-            int exp = 0;
-            switch (monster.MonsterType)
-            {
-                case MonsterTypes.Slime:
-                    exp = 10;
-                    break;
-                case MonsterTypes.Ogre:
-                    exp = 50;
-                    break;
-                case MonsterTypes.Troll:
-                    exp = 30;
-                    break;
-                case MonsterTypes.Snake:
-                    exp = 35;
-                    break;
-            }
-            return exp;
+            int exp = monster.ExperiencePoints(hero);
+            ExperienceGained(hero, exp);
         }
+
         private void ExperienceGained(Hero hero, int exp)
         {
-            hero.ExperiencePoints = hero.ExperiencePoints + exp;
-            HeroCheckForLevelUp(hero);
-        }
-        private void HeroCheckForLevelUp(Hero hero)
-        {
+            hero.ExperiencePoints += exp;
             if (hero.ExperiencePoints >= 100)
-            {
-                hero.Level++;
-                int numberLeft = hero.ExperiencePoints % 100;
-                hero.ExperiencePoints = hero.ExperiencePoints - 100;
-            }
+                hero.LevelUp();
         }
     }
 }

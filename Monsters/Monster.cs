@@ -12,6 +12,7 @@ namespace AdventureGame
         public virtual int LifeLower { get; set; } = 0;
         public virtual int LifeHigher { get; set; } = 100;
         public int Modifier { get; set; }
+        public abstract int ExperiencePoints(Hero hero);
 
         public Monster(int level)
         {

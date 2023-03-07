@@ -10,7 +10,7 @@ namespace AdventureGame
         public override int LifeHigher { get; set; } = 19;
         public Slime(int level) : base(level)
         {
-            Strength *= Modifier / 2;
+            Strength = Strength * Modifier / 2;
             Life = RandomHP() * Modifier;
             Color = RandomColor();
             Name = GetName();
@@ -22,6 +22,12 @@ namespace AdventureGame
             return $"{Color} {MonsterType}";
         }
 
-
+        public override int ExperiencePoints(Hero hero)
+        {
+            int exp = 80 - (hero.Level * 10);
+            if (exp < 5)
+                return 5;
+            return exp;
+        }
     }
 }
