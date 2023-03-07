@@ -6,8 +6,8 @@ namespace AdventureGame
         // Early enemy there for level up and some drops
         public override SlimeColor Color { get; init; }
         public override MonsterTypes MonsterType { get; init; }
-        public override int LifeLower { get; set; } = 10;
-        public override int LifeHigher { get; set; } = 19;
+        protected override int LifeLower { get; set; } = 10;
+        protected override int LifeHigher { get; set; } = 19;
         public Slime(int level) : base(level)
         {
             Strength = Strength * Modifier / 2;
@@ -28,6 +28,19 @@ namespace AdventureGame
             if (exp < 5)
                 return 5;
             return exp;
+        }
+
+        public override string EncounterText()
+        {
+            string[] strings = {
+                "You hear something razzling in the bush!",
+                "You see something slimey ahead",
+                "What is that thing?!?!",
+                "That one looks weak!!!",
+                "Come on, not another one of these!"
+            };
+            int choice = randomNumber.Next(1, strings.Length);
+            return strings[choice];
         }
     }
 }

@@ -16,16 +16,16 @@ namespace AdventureGame
             // Name, type, str, armor, hp but initiative needs to be hidden
             // idea is to make a few enemies having a chance for initiative like maybe ogre
             // but never slimes or snakes
-            // Should give hero a choice of what to do before fighting
+            // Should give hero a choice of what to dao before fighting
             // Fight, Run, Look in backpack
             bool HeroNotRunning = true;
             bool isHeroInitiative = true;
             do
             {
-                Console.WriteLine($"{hero.Name} has {hero.Life} left \n" +
-                                  $"Hero has {hero.Strength} strength and {hero.Protection} protection");
-                Console.WriteLine($"{monster.Name} has {monster.Life} left \n" +
-                                  $"Monster has {monster.Strength} strength and {monster.Protection} protection");
+                Console.WriteLine($"{hero.Name} has {hero.Life} hp left \n" +
+                                  $"{hero.Name} has {hero.Strength} strength and {hero.Protection} protection");
+                Console.WriteLine($"{monster.Name} has {monster.Life} hp left \n" +
+                                  $"{monster.Name} has {monster.Strength} strength and {monster.Protection} protection");
                 Console.WriteLine("What do you want to do? [F]ight, [R]un or look at [I]tems");
                 ConsoleKeyInfo input = Console.ReadKey();
                 switch (input.Key)

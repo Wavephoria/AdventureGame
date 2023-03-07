@@ -22,6 +22,7 @@ namespace AdventureGame
             Console.WriteLine("W to move North, A to move West, S to move South, D to move East, I to check Inventory or C to check Stats");
 
             ConsoleKeyInfo input = Console.ReadKey(true);
+            Console.Clear();
             switch (input.Key)
             {
                 case ConsoleKey.W:
@@ -107,7 +108,7 @@ namespace AdventureGame
 
         private void CheckInventory(Hero player)
         {
-            foreach (var item in player.backpack.open)
+            foreach (var item in player.Backpack.open)
             {
                 Console.WriteLine($"You have {item.Name}");
             }

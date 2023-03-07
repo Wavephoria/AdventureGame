@@ -18,7 +18,7 @@ namespace AdventureGame
 
             Hero player = new Hero();
             System.Console.WriteLine(StoryTelling.BeginningAdventure(player));
-            System.Console.WriteLine(player.pouch);
+            System.Console.WriteLine(player.Pouch);
             bool isNotDone = true;
             do
             {

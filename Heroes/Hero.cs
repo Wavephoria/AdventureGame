@@ -5,14 +5,15 @@ namespace AdventureGame
         public HeroClasses HeroClass { get; init; }
         public Elements Element { get; set; }
         public int ExperiencePoints { get; set; }
-        public Backpack backpack;
-        public Pouch pouch;
+        public Backpack Backpack;
+        public Pouch Pouch;
         public int FocusPercentage { get; set; }
         public int[,] Position = new int[64, 64];
-        public int X { get; set; } = 15;
-        public int Y { get; set; } = 45;
+        public int X { get; set; } = 45;
+        public int Y { get; set; } = 15;
         public int StartPosition { get; private set; }
         public int StartingLife { get; set; }
+        public Armor Torso { get; set; }
 
         public Hero()
         {
@@ -22,9 +23,9 @@ namespace AdventureGame
             HeroClass = HeroClasses.Adventurer;
             Life = randomNumber.Next(100, 151);
             StartingLife = Life;
-            backpack = new Backpack($"{Name}s backpack");
-            backpack.open.Add(new Item("Napkins"));
-            pouch = new Pouch();
+            Backpack = new Backpack($"{Name}s backpack");
+            Backpack.open.Add(new Item("Napkins"));
+            Pouch = new Pouch();
             Initiative = randomNumber.Next(50, 101);
             FocusPercentage = 100;
         }
@@ -41,9 +42,9 @@ namespace AdventureGame
         }
         internal void ItemToBackpack(IBag item)
         {
-            if (backpack.open.Count() == backpack.Storage)
-                System.Console.WriteLine("Cant add more items!");
-            backpack.open.Add(item);
+            if (Backpack.open.Count() == Backpack.Storage)
+                Console.WriteLine("Cant add more items!");
+            Backpack.open.Add(item);
         }
 
         public override string ToString()
